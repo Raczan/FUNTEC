@@ -1,12 +1,14 @@
 'use client';
 import { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
-import { Search, ShoppingCart, Menu, X } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { navbarLinks } from '@/constants';
 import { Button } from './ui/button';
 import Link from 'next/link';
 import { Merriweather } from 'next/font/google';
 import { usePathname } from 'next/navigation';
+import { ShopCart } from './shopcart';
+import { PageSearch } from './search';
 
 const merriWeather = Merriweather({
   weight: '700',
@@ -37,8 +39,9 @@ const Navbar = () => {
   return (
     <nav
       className={cn(
-        'fixed top-0 w-full z-10 transition-colors duration-300 bg-white sm:bg-transparent',
-        scrolled && '!bg-white'
+        'fixed top-0 w-full z-10 transition-colors duration-300 bg-transparent',
+        scrolled && 'bg-white',
+        openMenu && 'bg-white'
       )}
     >
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
@@ -67,21 +70,8 @@ const Navbar = () => {
                 ))}
               </div>
             </div>
-
-            <Button
-              variant="ghost"
-              size="icon"
-              className="hover:text-blueNavy text-lightGray"
-            >
-              <Search className="h-4 w-4" />
-            </Button>
-            <Button
-              variant="ghost"
-              size="icon"
-              className="hover:text-blueNavy text-lightGray"
-            >
-              <ShoppingCart className="h-4 w-4" />
-            </Button>
+            <PageSearch />
+            <ShopCart />
 
             {/* Burguer menu */}
             <Button
