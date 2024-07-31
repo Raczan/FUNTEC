@@ -20,6 +20,8 @@ const config = {
     },
     extend: {
       colors: {
+        blueNavy: '#252B42',
+        lightGray: '#737373',
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
         ring: 'hsl(var(--ring))',
