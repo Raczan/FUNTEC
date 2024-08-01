@@ -94,7 +94,10 @@ export default function Home() {
           </div>
           <div className="grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-3 w-full">
             {services.map((service) => (
-              <Card className="sm:col-span-1 bg-[#F6E4D7] border-none">
+              <Card
+                className="sm:col-span-1 bg-[#F6E4D7] border-none"
+                key={service.id}
+              >
                 <CardHeader className="flex flex-row gap-4 justify-center items-center font-light">
                   <span className="rounded-full w-14 h-14 bg-white flex items-center justify-center">
                     <service.icon className="text-gold" strokeWidth={1.5} />
@@ -171,8 +174,8 @@ export default function Home() {
             </p>
           </div>
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-3 w-full">
-            {[...Array(3)].map(() => (
-              <Card className="sm:col-span-1">
+            {[...Array(3)].map((i) => (
+              <Card className="sm:col-span-1" key={i}>
                 <CardHeader>
                   <Image
                     src="/stars.png"
@@ -223,7 +226,7 @@ export default function Home() {
           </div>
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-3 w-full">
             {attorneys.map((attorney) => (
-              <Card className="sm:col-span-1 rounded-none">
+              <Card className="sm:col-span-1 rounded-none" key={attorney.id}>
                 <CardHeader className="relative h-56">
                   <Image
                     className="w-full h-full"

@@ -27,8 +27,8 @@ export function ShopCart() {
         <SheetHeader>
           <SheetTitle>Shop cart</SheetTitle>
           <SheetDescription>
-            You haven't made any purchases yet. Start shopping now to find great
-            deals and add items to your cart!
+            You haven&apos;t made any purchases yet. Start shopping now to find
+            great deals and add items to your cart!
           </SheetDescription>
         </SheetHeader>
         <SheetFooter>
