@@ -39,7 +39,7 @@ const Navbar = () => {
   return (
     <nav
       className={cn(
-        'fixed top-0 w-full z-10 transition-colors duration-300 bg-transparent',
+        'fixed top-0 w-screen z-10 transition-colors duration-300 bg-transparent',
         scrolled && 'bg-white',
         openMenu && 'bg-white'
       )}
