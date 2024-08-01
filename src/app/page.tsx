@@ -76,7 +76,7 @@ export default function Home() {
           <BookApointment />
         </div>
       </section>
-      <section className="h-auto w-full flex">
+      <section className="h-auto w-full flex" id="product">
         <div className="gap-x-6 gap-y-8 pt-16 pb-16 mx-auto max-w-5xl px-2 sm:px-6 lg:px-8 space-y-14">
           <div className="space-y-2">
             <h2
@@ -154,7 +154,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="h-auto w-full flex bg-[#F3F3F3]">
+      <section className="h-auto w-full flex bg-[#F3F3F3]" id="pricing">
         <div className="gap-x-6 gap-y-8 pt-20 pb-20 mx-auto max-w-5xl px-2 sm:px-6 lg:px-8 space-y-14">
           <div className="space-y-2">
             <h2
@@ -265,7 +265,10 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="relative w-full min-h-[calc(100vh-4rem)]">
+      <section
+        className="relative w-full min-h-[calc(100vh-4rem)]"
+        id="contact"
+      >
         <Image
           className="absolute inset-0 w-full h-full object-cover"
           src="/contact.png"

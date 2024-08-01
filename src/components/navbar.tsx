@@ -6,7 +6,6 @@ import { navbarLinks } from '@/constants';
 import { Button } from './ui/button';
 import Link from 'next/link';
 import { Merriweather } from 'next/font/google';
-import { usePathname } from 'next/navigation';
 import { ShopCart } from './shopcart';
 import { PageSearch } from './search';
 
@@ -18,7 +17,6 @@ const merriWeather = Merriweather({
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [openMenu, setOpenMenu] = useState(false);
-  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -58,11 +56,7 @@ const Navbar = () => {
                   <Link href={link.href} key={link.name}>
                     <Button
                       variant="link"
-                      className={`hover:text-blueNavy ${
-                        link.href === pathname
-                          ? 'text-blueNavy'
-                          : 'text-lightGray'
-                      }`}
+                      className="hover:text-blueNavy text-lightGray"
                     >
                       {link.name}
                     </Button>
@@ -96,9 +90,7 @@ const Navbar = () => {
             <Link href={link.href} key={link.name}>
               <Button
                 variant="ghost"
-                className={`hover:text-blueNavy w-full ${
-                  link.href === pathname ? 'text-blueNavy' : 'text-lightGray'
-                }`}
+                className="hover:text-blueNavy text-lightGray"
               >
                 {link.name}
               </Button>

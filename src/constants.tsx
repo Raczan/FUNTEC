@@ -5,15 +5,15 @@ export const navbarLinks = [
     name: 'Home',
   },
   {
-    href: '/product',
+    href: '#product',
     name: 'Product',
   },
   {
-    href: '/pricing',
+    href: '#pricing',
     name: 'Pricing',
   },
   {
-    href: '/contact',
+    href: '#contact',
     name: 'Contact',
   },
 ];
