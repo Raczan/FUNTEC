@@ -14,6 +14,7 @@ import {
 } from '@/components/ui/card';
 import { services, attorneys } from '@/constants';
 import { Facebook, Instagram, Twitter } from 'lucide-react';
+import Footer from '@/components/footer';
 
 const merriWeather = Merriweather({
   weight: '900',
@@ -276,6 +277,30 @@ export default function Home() {
           <ContactUs />
         </div>
       </section>
+      <section className="h-auto w-full">
+        <div className="gap-x-6 gap-y-8 py-14 mx-auto max-w-5xl px-2 sm:px-6 lg:px-8 space-y-14 flex sm:flex-row flex-col sm:justify-between">
+          <div className="space-y-2 w-full">
+            <h2
+              className={cn(
+                'text-blueNavy text-2xl',
+                merriWeather400.className
+              )}
+            >
+              Request A Free Consultation
+            </h2>
+            <p className="max-w-lg text-lightGray">
+              the quick fox jumps over the lazy dog
+            </p>
+          </div>
+          <Button
+            className="hover:bg-brown/90 bg-brown w-full sm:w-fit p-6 !my-auto"
+            type="submit"
+          >
+            Contact Us
+          </Button>
+        </div>
+      </section>
+      <Footer />
     </main>
   );
 }
