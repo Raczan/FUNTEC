@@ -20,6 +20,7 @@ const config = {
     },
     extend: {
       colors: {
+        gold: '#D0A144',
         brown: '#784F33',
         blueNavy: '#252B42',
         skyBlue: '#295C7A',

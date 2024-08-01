@@ -1,3 +1,4 @@
+import { Scale, Gavel, ScrollText } from 'lucide-react';
 export const navbarLinks = [
   {
     href: '/',
@@ -61,4 +62,46 @@ export const times = [
   { id: 8, name: '7:30 Available' },
   { id: 9, name: '8:00 Available' },
   { id: 10, name: '8:30 Available' },
+];
+
+export const services = [
+  { id: 1, title: 'Frauds or Mislead', icon: Scale },
+  { id: 2, title: 'Bailes & Warrants', icon: Gavel },
+  { id: 3, title: 'Federal Drug Crimes', icon: ScrollText },
+];
+
+export const attorneys = [
+  {
+    id: 1,
+    image: '/ashley.png',
+    name: 'Ashley Fletcher',
+    title: 'LAYER & CEO',
+    social: {
+      facebook: 'https://www.facebook.com/',
+      instagram: 'https://www.instagram.com/',
+      twitter: 'https://x.com/',
+    },
+  },
+  {
+    id: 2,
+    image: '/rodney.png',
+    name: 'Rodney Stratton',
+    title: 'CEO',
+    social: {
+      facebook: 'https://www.facebook.com/',
+      instagram: 'https://www.instagram.com/',
+      twitter: 'https://x.com/',
+    },
+  },
+  {
+    id: 3,
+    image: '/avie.png',
+    name: 'Avie Beaton',
+    title: 'LAYER CIVIL LAW',
+    social: {
+      facebook: 'https://www.facebook.com/',
+      instagram: 'https://www.instagram.com/',
+      twitter: 'https://x.com/',
+    },
+  },
 ];
