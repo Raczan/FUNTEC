@@ -63,7 +63,7 @@ const BookApointment = () => {
                   type="text"
                   {...field}
                   placeholder="Full Name"
-                  className="bg-[#F9F9F9]  border-[#BDBDBD] !text-lightGray"
+                  className="bg-[#F9F9F9]  border-mutedGray !text-lightGray"
                 />
               </FormControl>
               <FormMessage className="text-left" />
@@ -84,7 +84,7 @@ const BookApointment = () => {
                   type="email"
                   {...field}
                   placeholder="example@gmail.com"
-                  className="bg-[#F9F9F9]  border-[#BDBDBD] !text-lightGray"
+                  className="bg-[#F9F9F9]  border-mutedGray !text-lightGray"
                 />
               </FormControl>
               <FormMessage className="text-left" />
@@ -101,7 +101,7 @@ const BookApointment = () => {
               </FormLabel>
               <Select onValueChange={field.onChange} name="department">
                 <FormControl>
-                  <SelectTrigger className="!text-lightGray bg-[#F9F9F9]  border-[#BDBDBD]">
+                  <SelectTrigger className="!text-lightGray bg-[#F9F9F9]  border-mutedGray">
                     <SelectValue placeholder="Please Select" />
                   </SelectTrigger>
                 </FormControl>
@@ -136,7 +136,7 @@ const BookApointment = () => {
               </FormLabel>
               <Select onValueChange={field.onChange} name="time">
                 <FormControl>
-                  <SelectTrigger className="!text-lightGray bg-[#F9F9F9]  border-[#BDBDBD]">
+                  <SelectTrigger className="!text-lightGray bg-[#F9F9F9]  border-mutedGray">
                     <SelectValue placeholder="Please Select" />
                   </SelectTrigger>
                 </FormControl>

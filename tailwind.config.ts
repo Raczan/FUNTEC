@@ -25,6 +25,7 @@ const config = {
         blueNavy: '#252B42',
         skyBlue: '#295C7A',
         lightGray: '#737373',
+        mutedGray: '#BDBDBD',
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
         ring: 'hsl(var(--ring))',

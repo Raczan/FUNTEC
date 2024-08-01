@@ -71,7 +71,7 @@ const ContactUs = () => {
                     type="text"
                     {...field}
                     placeholder="Full Name"
-                    className="border-[#BDBDBD] !text-lightGray"
+                    className="border-mutedGray !text-lightGray"
                   />
                 </FormControl>
                 <FormMessage className="text-left" />
@@ -89,7 +89,7 @@ const ContactUs = () => {
                     type="email"
                     {...field}
                     placeholder="example@gmail.com"
-                    className="border-[#BDBDBD] !text-lightGray"
+                    className="border-mutedGray !text-lightGray"
                   />
                 </FormControl>
                 <FormMessage className="text-left" />
@@ -105,7 +105,7 @@ const ContactUs = () => {
               <FormItem className="w-full">
                 <Select onValueChange={field.onChange} name="department">
                   <FormControl>
-                    <SelectTrigger className="!text-lightGray border-[#BDBDBD]">
+                    <SelectTrigger className="!text-lightGray border-mutedGray">
                       <SelectValue placeholder="Please Select" />
                     </SelectTrigger>
                   </FormControl>
@@ -137,7 +137,7 @@ const ContactUs = () => {
               <FormItem className="w-full">
                 <Select onValueChange={field.onChange} name="time">
                   <FormControl>
-                    <SelectTrigger className="!text-lightGray  border-[#BDBDBD]">
+                    <SelectTrigger className="!text-lightGray  border-mutedGray">
                       <SelectValue placeholder="Please Select" />
                     </SelectTrigger>
                   </FormControl>
@@ -169,7 +169,7 @@ const ContactUs = () => {
                 <Textarea
                   placeholder="Message"
                   {...field}
-                  className="border-[#BDBDBD]"
+                  className="border-mutedGray"
                 />
               </FormControl>
               <FormMessage />
