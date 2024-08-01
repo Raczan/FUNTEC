@@ -26,6 +26,15 @@ export const defaultValBookAppoint = {
   time: '',
 };
 
+export const defaultValContact = {
+  name: '',
+  email: '',
+  // selects //
+  department: '',
+  time: '',
+  message: '',
+};
+
 export const departments = [
   { id: 1, name: 'Guatemala' },
   { id: 2, name: 'El Progreso' },

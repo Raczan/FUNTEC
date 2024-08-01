@@ -4,6 +4,7 @@ import { cn } from '@/lib/utils';
 import { Merriweather } from 'next/font/google';
 import { Button } from '@/components/ui/button';
 import BookApointment from '@/components/bookapointment';
+import ContactUs from '@/components/contactus';
 import {
   Card,
   CardContent,
@@ -261,6 +262,18 @@ export default function Home() {
               </Card>
             ))}
           </div>
+        </div>
+      </section>
+      <section className="relative w-full min-h-[calc(100vh-4rem)]">
+        <Image
+          className="absolute inset-0 w-full h-full object-cover"
+          src="/contact.png"
+          alt="Background contact us"
+          fill={true}
+          priority
+        />
+        <div className="relative inset-0 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-7 sm:min-h-screen pt-16 mx-auto max-w-5xl px-2 sm:px-6 lg:px-8">
+          <ContactUs />
         </div>
       </section>
     </main>
