@@ -13,7 +13,6 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-  FormDescription,
 } from '@/components/ui/form';
 import {
   Select,
@@ -25,6 +24,7 @@ import {
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { formSchema, department, time } from '@/definitions';
+import { useToast } from './ui/use-toast';
 
 const merriWeather = Merriweather({
   weight: '700',
@@ -32,14 +32,35 @@ const merriWeather = Merriweather({
 });
 
 const BookApointment = () => {
+  const { toast } = useToast();
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: defaultValBookAppoint,
   });
 
-  const onSubmit = (values: z.infer<typeof formSchema>) => {
-    console.log(values);
+  const onSubmit = async (formData: z.infer<typeof formSchema>) => {
+    await fetch('/api/send', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+
+      body: JSON.stringify({
+        name: formData.name,
+        email: formData.email,
+      }),
+    }).then(() => {
+      // Toast notification
+      form.reset();
+      return toast({
+        title: 'Success',
+        description: 'Thank you for contacting us, we will be in touch soon.',
+      });
+    });
+
+    form.reset();
   };
+
   return (
     <Form {...form}>
       <form

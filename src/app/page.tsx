@@ -15,6 +15,7 @@ import {
 import { services, attorneys } from '@/constants';
 import { Facebook, Instagram, Twitter } from 'lucide-react';
 import Footer from '@/components/footer';
+import { Toaster } from '@/components/ui/toaster';
 
 const merriWeather = Merriweather({
   weight: '900',
@@ -29,6 +30,7 @@ const merriWeather400 = Merriweather({
 export default function Home() {
   return (
     <main className="min-h-screen min-w-screen">
+      <Toaster />
       <Navbar />
       <section className="relative w-full min-h-screen">
         <Image

@@ -24,6 +24,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { formSchemaContact, department, time } from '@/definitions';
+import { useToast } from './ui/use-toast';
 
 const merriWeather = Merriweather({
   weight: '400',
@@ -31,14 +32,35 @@ const merriWeather = Merriweather({
 });
 
 const ContactUs = () => {
+  const { toast } = useToast();
   const form = useForm<z.infer<typeof formSchemaContact>>({
     resolver: zodResolver(formSchemaContact),
     defaultValues: defaultValContact,
   });
 
-  const onSubmit = (values: z.infer<typeof formSchemaContact>) => {
-    console.log(values);
+  const onSubmit = async (formData: z.infer<typeof formSchemaContact>) => {
+    await fetch('/api/send', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+
+      body: JSON.stringify({
+        name: formData.name,
+        email: formData.email,
+      }),
+    }).then(() => {
+      // Toast notification
+      form.reset();
+      return toast({
+        title: 'Success',
+        description: 'Thank you for contacting us, we will be in touch soon.',
+      });
+    });
+
+    form.reset();
   };
+
   return (
     <Form {...form}>
       <form
